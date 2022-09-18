@@ -20,26 +20,41 @@ public class DrawPanel extends JPanel {
 
         //t.draw(g);
 
-
         //walls
-        gr.drawLine(0, getHeight(), getWidth()/4, (int) (getHeight()*0.75));
-        gr.drawLine((int) (getWidth()*0.75), (int) (getHeight()*0.75), getWidth(), getHeight());
-        gr.drawLine(0, 0, getWidth()/4, (getHeight()/6));
-        gr.drawLine((int) (getWidth()*0.75), (getHeight()/6), getWidth(), 0);
-        gr.drawRect(getWidth()/4, (getHeight()/6), (int) (getWidth()*0.5), (int) (getHeight()*0.583));
+        g.drawLine(0, getHeight(), getWidth()/4, (int) (getHeight()*0.75));
+        g.drawLine((int) (getWidth()*0.75), (int) (getHeight()*0.75), getWidth(), getHeight());
+        g.drawLine(0, 0, getWidth()/4, (getHeight()/6));
+        g.drawLine((int) (getWidth()*0.75), (getHeight()/6), getWidth(), 0);
+        g.drawRect(getWidth()/4, (getHeight()/6), (int) (getWidth()*0.5), (int) (getHeight()*0.583));
 
         //door
-        gr.drawLine(getWidth()/12, (int) (getHeight()*0.915), getWidth()/12, (int) (getHeight()*0.25));
-        gr.drawLine(getWidth()/6, (int) (getHeight()*0.832), getWidth()/6, (int) (getHeight()*0.3));
-        gr.drawLine(getWidth()/12, (int) (getHeight()*0.25), getWidth()/6, (int) (getHeight()*0.3));
-        gr.fillOval((int) (getWidth()/12 + 0.2*(getWidth()/6 - getWidth()/12)), (int) ((getHeight()*0.25) + 0.66*((getHeight()*0.832) - (getHeight()*0.25))), 8, 8);
+        g.drawLine(getWidth()/12, (int) (getHeight()*0.915), getWidth()/12, (int) (getHeight()*0.25));
+        g.drawLine(getWidth()/6, (int) (getHeight()*0.832), getWidth()/6, (int) (getHeight()*0.3));
+        g.drawLine(getWidth()/12, (int) (getHeight()*0.25), getWidth()/6, (int) (getHeight()*0.3));
+        g.fillOval((int) (getWidth()/12 + 0.2*(getWidth()/6 - getWidth()/12)), (int) ((getHeight()*0.25) + 0.66*((getHeight()*0.832) - (getHeight()*0.25))), 8, 8);
 
         //window
-        gr.drawLine((int) (getWidth()*0.92), (int) (getHeight()*0.515), (int) (getWidth()*0.92), (int) (getHeight()*0.25));
-        gr.drawLine((int) (getWidth()*0.83), (int) (getHeight()*0.46), (int) (getWidth()*0.92), (int) (getHeight()*0.515));
-        gr.drawLine((int) (getWidth()*0.92), (int) (getHeight()*0.25), (int) (getWidth()*0.83), (int) (getHeight()*0.30));
-        gr.drawLine((int) (getWidth()*0.85) ,(int) (getHeight()*0.46), (int) (getWidth()*0.92), (int) (getHeight()*0.498));
-        gr.drawLine((int) (getWidth()*0.85) ,(int) (getHeight()*0.3), (int) (getWidth()*0.92), (int) (getHeight()*0.267));
-        gr.drawRect((int) (getWidth()*0.83), (int) (getHeight()*0.30), (int) (getWidth()*0.02), (int) (getHeight()*0.16));
+        g.drawLine((int) (getWidth()*0.92), (int) (getHeight()*0.515), (int) (getWidth()*0.92), (int) (getHeight()*0.25));
+        g.drawLine((int) (getWidth()*0.83), (int) (getHeight()*0.46), (int) (getWidth()*0.92), (int) (getHeight()*0.515));
+        g.drawLine((int) (getWidth()*0.92), (int) (getHeight()*0.25), (int) (getWidth()*0.83), (int) (getHeight()*0.30));
+        g.drawLine((int) (getWidth()*0.85) ,(int) (getHeight()*0.46), (int) (getWidth()*0.92), (int) (getHeight()*0.498));
+        g.drawLine((int) (getWidth()*0.85) ,(int) (getHeight()*0.3), (int) (getWidth()*0.92), (int) (getHeight()*0.267));
+        g.drawRect((int) (getWidth()*0.83), (int) (getHeight()*0.30), (int) (getWidth()*0.02), (int) (getHeight()*0.16));
+
+        //table
+        g.drawRect((int) (getWidth()*0.35), (int) (getHeight()*0.69), (int) (getWidth()*0.07), (int) (getHeight()*0.09));
+        g.drawRect((int) (getWidth()*0.581), (int) (getHeight()*0.69), (int) (getWidth()*0.07), (int) (getHeight()*0.09));
+
+        g.drawLine((int) (getWidth()*0.35), (int) (getHeight()*0.69), (int) (getWidth()*0.39), (int) (getHeight()*0.58));
+        g.drawLine((int) (getWidth()*0.39), (int) (getHeight()*0.58), (int) (getWidth()*0.61), (int) (getHeight()*0.58));
+        g.drawLine((int) (getWidth()*0.61), (int) (getHeight()*0.58), (int) (getWidth()*0.65), (int) (getHeight()*0.69));
+        g.drawLine((int) (getWidth()*0.65), (int) (getHeight()*0.69), (int) (getWidth()*0.35), (int) (getHeight()*0.69));
+        g.drawLine((int) (getWidth()*0.42), (int) (getHeight()*0.78), (int) (getWidth()*0.435), (int) (getHeight()*0.75));
+        g.drawLine((int) (getWidth()*0.435), (int) (getHeight()*0.75), (int) (getWidth()*0.435), (int) (getHeight()*0.69));
+        g.drawLine((int) (getWidth()*0.581), (int) (getHeight()*0.78), (int) (getWidth()*0.566), (int) (getHeight()*0.75));
+        g.drawLine((int) (getWidth()*0.566), (int) (getHeight()*0.75), (int) (getWidth()*0.566), (int) (getHeight()*0.69));
+
+
+
     }
 }
